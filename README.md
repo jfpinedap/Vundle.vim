@@ -57,155 +57,155 @@
    Put this at the top of your `.vimrc` to use Vundle. Remove plugins you don't need, they are for illustration purposes.
 
    ```vim
-   " jfpinedap setings for https://github.com/VundleVim/Vundle.vim  
-set nocompatible  " be iMproved, required
-filetype off  " required
-set exrc
+   "jfpinedap setings for https://github.com/VundleVim/Vundle.vim  
+   set nocompatible  " be iMproved, required
+   filetype off  " required
+   set exrc
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+   set rtp+=~/.vim/bundle/Vundle.vim
+   call vundle#begin()
 
-" ==== Icons
-Plugin 'ryanoasis/vim-devicons'
+   " ==== Icons
+   Plugin 'ryanoasis/vim-devicons'
 
-" ==== plugin manager
-Plugin 'VundleVim/Vundle.vim'
+   " ==== plugin manager
+   Plugin 'VundleVim/Vundle.vim'
 
-" ==== helpers
-Plugin 'vim-scripts/L9'
+   " ==== helpers
+   Plugin 'vim-scripts/L9'
 
-" ==== File tree
-Plugin 'scrooloose/nerdtree'
+   " ==== File tree
+   Plugin 'scrooloose/nerdtree'
 
-" ==== Completion
-Plugin 'Valloric/YouCompleteMe'
+   " ==== Completion
+   Plugin 'Valloric/YouCompleteMe'
 
-" ==== Git
-Plugin 'airblade/vim-gitgutter'
-Plugin 'tpope/vim-fugitive'
+   " ==== Git
+   Plugin 'airblade/vim-gitgutter'
+   Plugin 'tpope/vim-fugitive'
 
-" ==== syntax helpers
-Plugin 'scrooloose/syntastic'
-Plugin 'tpope/vim-surround'
-Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'othree/yajs.vim'
-Plugin 'mitsuhiko/vim-jinja'
-Plugin 'octol/vim-cpp-enhanced-highlight'
-Plugin 'ap/vim-css-color'
-Plugin 'Vimjas/vim-python-pep8-indent'
+   " ==== syntax helpers
+   Plugin 'scrooloose/syntastic'
+   Plugin 'tpope/vim-surround'
+   Plugin 'cakebaker/scss-syntax.vim'
+   Plugin 'othree/yajs.vim'
+   Plugin 'mitsuhiko/vim-jinja'
+   Plugin 'octol/vim-cpp-enhanced-highlight'
+   Plugin 'ap/vim-css-color'
+   Plugin 'Vimjas/vim-python-pep8-indent'
 
-" ==== moving / searching
-Plugin 'easymotion/vim-easymotion'
-Plugin 'kien/ctrlp.vim'
+   " ==== moving / searching
+   Plugin 'easymotion/vim-easymotion'
+   Plugin 'kien/ctrlp.vim'
 
-" ==== snippets
-Plugin 'SirVer/ultisnips'
+   " ==== snippets
+   Plugin 'SirVer/ultisnips'
 
-" Status bar on bottom
-Plugin 'bling/vim-airline'
+   " Status bar on bottom
+   Plugin 'bling/vim-airline'
 
-" ==== PLUGIN THEMES
-Plugin 'morhetz/gruvbox'
+   " ==== PLUGIN THEMES
+   Plugin 'morhetz/gruvbox'
 
-call vundle#end()
-filetype plugin indent on
+   call vundle#end()
+   filetype plugin indent on
 
-" ==== Colors and other basic settings
-colorscheme gruvbox
-set guifont=Monospace\ 11
-set fillchars+=vert:'
-syntax enable
-set background=dark
-set ruler
-"set hidden "Don't show The message --> E37: No write since last change (add ! to override)
-" and if opening a new file when the current buffer has unsaved changes causes files to be hidden instead of closed
-set number
-set laststatus=2
-set smartindent
-set st=4 sw=4 et
-set tabstop=4     " The width of a TAB is set to 4. Still it is a \t. It is just that Vim will interpret it to be having a width of 4.                
-set softtabstop=4 " Sets the number of columns for a TAB.
-set expandtab     " Expand TABs to spaces.
-set shiftwidth=4  " Indents will have a width of 4.
-set smarttab
+   " ==== Colors and other basic settings
+   colorscheme gruvbox
+   set guifont=Monospace\ 11
+   set fillchars+=vert:'
+   syntax enable
+   set background=dark
+   set ruler
+   "set hidden "Don't show The message --> E37: No write since last change (add ! to override)
+   " and if opening a new file when the current buffer has unsaved changes causes files to be hidden instead of closed
+   set number
+   set laststatus=2
+   set smartindent
+   set st=4 sw=4 et
+   set tabstop=4     " The width of a TAB is set to 4. Still it is a \t. It is just that Vim will interpret it to be having a width of 4.                
+   set softtabstop=4 " Sets the number of columns for a TAB.
+   set expandtab     " Expand TABs to spaces.
+   set shiftwidth=4  " Indents will have a width of 4.
+   set smarttab
 
-"let &colorcolumn="80"
-:set guioptions-=m  "remove menu bar
-:set guioptions-=T  "remove toolbar
-:set guioptions-=r  "remove right-hand scroll bar
-:set guioptions-=L  "remove left-hand scroll bar
-":set lines=999 columns=999
+   "let &colorcolumn="80"
+   :set guioptions-=m  "remove menu bar
+   :set guioptions-=T  "remove toolbar
+   :set guioptions-=r  "remove right-hand scroll bar
+   :set guioptions-=L  "remove left-hand scroll bar
+   ":set lines=999 columns=999
 
-" ==== NERDTREE
-let NERDTreeIgnore = ['__pycache__', '\.pyc$', '\.o$', '\.so$', '\.a$', '\.swp', '*\.swp', '\.swo', '\.swn', '\.swh', '\.swm', '\.swl', '\.swk', '\.sw*$', '[a-zA-Z]*egg[a-zA-Z]*', '.DS_Store']
+   " ==== NERDTREE
+   let NERDTreeIgnore = ['__pycache__', '\.pyc$', '\.o$', '\.so$', '\.a$', '\.swp', '*\.swp', '\.swo', '\.swn', '\.swh', '\.swm', '\.swl', '\.swk', '\.sw*$', '[a-zA-Z]*egg[a-zA-Z]*', '.DS_Store']
 
-let NERDTreeShowHidden=1
-let g:NERDTreeWinPos="left"
-let g:NERDTreeDirArrows=0
-map <C-t> :NERDTreeToggle<CR>
-silent! map <F3> :NERDTreeFind<CR>
-"let g:NERDTreeMapActivateNode="<F3>"
-"let g:NERDTreeMapPreview="<F4>"
+   let NERDTreeShowHidden=1
+   let g:NERDTreeWinPos="left"
+   let g:NERDTreeDirArrows=0
+   map <C-t> :NERDTreeToggle<CR>
+   silent! map <F3> :NERDTreeFind<CR>
+   "let g:NERDTreeMapActivateNode="<F3>"
+   "let g:NERDTreeMapPreview="<F4>"
 
-" ==== Syntastic
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_javascript_mri_args = "--config=$HOME/.jshintrc"
-let g:syntastic_python_checkers = [ 'pylint', 'flake8', 'pep8', 'pyflakes', 'python']
-let g:syntastic_yaml_checkers = ['jsyaml']
-let g:syntastic_html_tidy_exec = 'tidy5'
+   " ==== Syntastic
+   let g:syntastic_always_populate_loc_list = 1
+   let g:syntastic_auto_loc_list = 1
+   let g:syntastic_check_on_open = 1
+   let g:syntastic_check_on_wq = 0
+   set statusline+=%#warningmsg#
+   set statusline+=%{SyntasticStatuslineFlag()}
+   set statusline+=%*
+   let g:syntastic_javascript_checkers = ['eslint']
+   let g:syntastic_javascript_mri_args = "--config=$HOME/.jshintrc"
+   let g:syntastic_python_checkers = [ 'pylint', 'flake8', 'pep8', 'pyflakes', 'python']
+   let g:syntastic_yaml_checkers = ['jsyaml']
+   let g:syntastic_html_tidy_exec = 'tidy5'
 
-" === flake8
-let g:flake8_show_in_file=1
+   " === flake8
+   let g:flake8_show_in_file=1
 
-" ==== snippets
-let g:UltiSnipsExpandTrigger="<A-ENTER>"
-let g:UltiSnipsJumpForwardTrigger="<A-ENTER>"
-let g:UltiSnipsJumpBackwardTrigger="<A-BACKSPACE>"
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
+   " ==== snippets
+   let g:UltiSnipsExpandTrigger="<A-ENTER>"
+   let g:UltiSnipsJumpForwardTrigger="<A-ENTER>"
+   let g:UltiSnipsJumpBackwardTrigger="<A-BACKSPACE>"
+   " If you want :UltiSnipsEdit to split your window.
+   let g:UltiSnipsEditSplit="vertical"
 
-" ==== Easymotion
-let g:EasyMotion_do_mapping = 0
-let g:EasyMotion_smartcase = 1
-nmap f <Plug>(easymotion-s)
+   " ==== Easymotion
+   let g:EasyMotion_do_mapping = 0
+   let g:EasyMotion_smartcase = 1
+   nmap f <Plug>(easymotion-s)
 
-" ==== moving around
-nmap <silent> <C-k> :wincmd k<CR>
-nmap <silent> <C-j> :wincmd j<CR>
-nmap <silent> <C-h> :wincmd h<CR>
-nmap <silent> <C-l> :wincmd l<CR>
-"nmap <silent> <A-Up> :wincmd k<CR>
-"nmap <silent> <A-Down> :wincmd j<CR>
-"nmap <silent> <A-Left> :wincmd h<CR>
-"nmap <silent> <A-Right> :wincmd l<CR>
+   " ==== moving around
+   nmap <silent> <C-k> :wincmd k<CR>
+   nmap <silent> <C-j> :wincmd j<CR>
+   nmap <silent> <C-h> :wincmd h<CR>
+   nmap <silent> <C-l> :wincmd l<CR>
+   "nmap <silent> <A-Up> :wincmd k<CR>
+   "nmap <silent> <A-Down> :wincmd j<CR>
+   "nmap <silent> <A-Left> :wincmd h<CR>
+   "nmap <silent> <A-Right> :wincmd l<CR>
 
-" ==== disable mouse
-"set mouse=c
+   " ==== disable mouse
+   "set mouse=c
 
-" ==== disable swap file warning
-"set shortmess+=A
+   " ==== disable swap file warning
+   "set shortmess+=A
 
-" ==== custom commands
-command JsonPretty execute ":%!python -m json.tool"
-set secure
+   " ==== custom commands
+   command JsonPretty execute ":%!python -m json.tool"
+   set secure
 
-"execute pathogen#infect()
-set ttymouse=xterm2
-set mouse=a
-set number
-syntax on
-inoremap <C-v> <ESC>"+pa
-vnoremap <C-c> "+y
-"vnoremap <C-d> "+d
-"filetype plugin indent on
-"autocmd vimenter * NERDTree "uncomment if you what to open a NERDTree automatically when vim starts up
+   "execute pathogen#infect()
+   set ttymouse=xterm2
+   set mouse=a
+   set number
+   syntax on
+   inoremap <C-v> <ESC>"+pa
+   vnoremap <C-c> "+y
+   "vnoremap <C-d> "+d
+   "filetype plugin indent on
+   "autocmd vimenter * NERDTree "uncomment if you what to open a NERDTree automatically when vim starts up
 
    ```
 
