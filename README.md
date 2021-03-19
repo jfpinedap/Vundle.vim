@@ -51,6 +51,12 @@
 2. Set up [Vundle]:
 
    ` git clone https://github.com/jfpinedap/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
+   
+   If you are using Debian-Ubuntu distributionsa and you want to enable the Ctrl+C (copy) option install the vim-gnome like this:
+   
+   ```bash
+   sudo apt install vim-gnome
+   ```
 
 3. Configure Plugins:
 
